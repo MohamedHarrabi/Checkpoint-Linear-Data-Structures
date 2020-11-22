@@ -1,0 +1,58 @@
+ALGORITHM Linear_Data_StructuresEx1
+VAR
+
+    tab1 : ARRAY_OF INTEGER[10];
+    tab2 : ARRAY_OF INTEGER[10];
+    tab3 : ARRAY_OF INTEGER[10];
+    somme,i,j,x : INTEGER :=  0;
+    n,m : INTEGER;
+    ex : BOOLEAN;
+
+BEGIN
+// Remplir les deux tableaux
+Write ("donnée le taille de tableau TAB1:");
+     Read(n);
+
+Write ("donnée le taille de tableau TAB2:");
+     Read(m);
+
+FOR i FROM 0 TO n DO
+ 
+ read(tab1[i]);
+
+END_FOR
+
+FOR j FROM 0 TO m DO
+ 
+ read(tab2[j]);
+
+END_FOR
+
+//Comparaison et calcul du somme 
+
+FOR i FROM 0 TO n DO
+ ex := FALSE;
+    FOR j FROM 0 TO m DO
+        IF(tab1[i] = tab2[j]) THEN
+
+                ex  := TRUE;
+                tab3[x]:=tab2[j]
+                x:=x+1;
+                BREAK;
+
+        END
+    END_FOR
+  IF (ex=FALSE) THEN
+            somme := somme + tab1[i];
+        END_IF
+    END_FOR
+FOR i FROM 0 TO x DO
+
+Write("distinct elements :",tab3[x]);
+
+END_FOR
+
+Write("Output :",somme);
+
+END
+

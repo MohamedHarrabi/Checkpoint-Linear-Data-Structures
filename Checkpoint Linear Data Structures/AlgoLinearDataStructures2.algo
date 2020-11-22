@@ -1,0 +1,53 @@
+ALGORITHM Linear_Data_StructuresEx1
+VAR
+
+    tab1 : ARRAY_OF INTEGER[10];
+    tab2 : ARRAY_OF INTEGER[10];
+    tab3 : ARRAY_OF INTEGER[10];
+    somme,i,j,x : INTEGER :=  0;
+    n,m : INTEGER;
+
+BEGIN
+// Remplir les deux tableaux
+Write ("donnée le taille de tableau TAB1:");
+     Read(n);
+
+Write ("donnée le taille de tableau TAB2:");
+     Read(m);
+
+FOR i FROM 0 TO n DO
+ 
+ read(tab1[i]);
+
+END_FOR
+
+FOR j FROM 0 TO m DO
+ 
+ read(tab2[j]);
+
+END_FOR
+
+//Comparaison et calcul du somme 
+
+FOR i FROM 0 TO n DO
+ ex := FALSE;
+    FOR j FROM 0 TO m DO
+        IF(tab1[i] = tab2[j]) THEN
+             
+                somme := somme + (tab1[i]*2);
+                tab3[x]:=tab2[j]
+                x:=x+1;
+
+        END
+    END_FOR
+    END_FOR
+    Write("Sum of overlapping elements:",somme);
+FOR i FROM 0 TO x DO
+
+Write("Common elements are :",tab3[x]);
+
+END_FOR
+
+
+
+END
